@@ -1,0 +1,8 @@
+@import url("__name/information__name.css");
+@import url("__profession/information__profession.css");
+.profile__information {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-right: 18px;
+}

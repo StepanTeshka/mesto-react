@@ -1,0 +1,8 @@
+@import url("__profile/section-interactions__profile.css");
+@import url("__button/section-interactions__button.css");
+.main__section-interactions {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}

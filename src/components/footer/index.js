@@ -1,0 +1,6 @@
+const Footer = () => (
+  <footer class="footer">
+    <p class="footer__copyright">© 2020 Mesto Russia</p>
+  </footer>
+);
+export default Footer;

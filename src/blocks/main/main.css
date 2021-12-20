@@ -1,0 +1,13 @@
+@import url("section-cards/main__section-cards.css");
+@import url("section-interactions/main__section-interactions.css");
+.main {
+  width: screen;
+  max-width: 840px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 36px;
+  contain: content;
+  padding-left: 27px;
+  padding-right: 27px;
+}

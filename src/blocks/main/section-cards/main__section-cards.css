@@ -1,0 +1,11 @@
+@import url("__organizing/section__cards__organizing.css");
+.main__section-cards {
+  padding-top: 36px;
+  gap: 1rem;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 50vh;
+}
