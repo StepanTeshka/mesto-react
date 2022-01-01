@@ -25,15 +25,15 @@ const EditorPopup = ({ isOpen, setOpen, setUser, user }) => {
           value={nameInput}
           onChange={(evt) => setNameInput(evt.target.value)}
           placeholder="Имя"
-          class="popup-card__input"
+          className="popup-card__input"
         />
         <input
           value={descriptionInput}
           onChange={(evt) => setDescriptionInput(evt.target.value)}
           placeholder="Профессия"
-          class="popup-card__input"
+          className="popup-card__input"
         />
-        <button class="popup-card__button-save">Сохранить</button>
+        <button className="popup-card__button-save">Сохранить</button>
       </form>
     </PopupOverlay>
   );

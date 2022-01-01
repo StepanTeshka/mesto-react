@@ -1,0 +1,10 @@
+.information__profession {
+  color: white;
+  font-size: 18px;
+  padding-left: 10px;
+}
+@media screen and (max-width: 900px) {
+  .information__profession {
+    font-size: 14px;
+  }
+}

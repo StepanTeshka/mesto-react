@@ -1,3 +1,22 @@
 .popup-card__button-close {
-  display: absolute;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+
+  transform: translateY(-40px) translateX(40px);
+  padding: 0px;
+  margin: 0px;
+  background: transparent;
+  border: transparent;
+  height: 32px;
+}
+@media screen and (max-width: 900px) {
+  .popup-card__button-close {
+    transform: translateY(-25px) translateX(0px);
+    height: 20px;
+    width: 20px;
+  }
+  .popup-card__button-close img {
+    width: 20px;
+  }
 }

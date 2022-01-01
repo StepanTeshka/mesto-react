@@ -1,0 +1,7 @@
+@import url("__information/profile__information.css");
+@import url("__edit-button/profile__edit-button.css");
+.profile__container {
+  align-items: center;
+  display: flex;
+  width: 100%;
+}

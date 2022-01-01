@@ -11,3 +11,9 @@
   padding-left: 27px;
   padding-right: 27px;
 }
+@media screen and (max-width: 620px) {
+  .main {
+    padding-left: 19px;
+    padding-right: 19px;
+  }
+}

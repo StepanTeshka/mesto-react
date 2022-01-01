@@ -1,0 +1,8 @@
+.information-container__button-like {
+  padding: 0px;
+  border: transparent;
+  background: transparent;
+}
+.information-container__button-like:hover {
+  opacity: 50%;
+}
