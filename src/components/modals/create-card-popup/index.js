@@ -27,6 +27,7 @@ const CreateCardPopup = ({ isOpen, setOpen, setCards, cards }) => {
           type="text"
           name="title"
           value={title}
+          maxlength="20"
         />
         <input
           onChange={(evt) => setLink(evt.target.value)}

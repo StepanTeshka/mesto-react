@@ -1,16 +1,22 @@
 import React, { useState } from "react";
 
-const Main = ({ setOpenEditorPopup, setOpenCreateCardPopup, user, cards }) => {
-  const [isLiked, setLike] = useState(false);
-
-  console.log(cards);
+const Main = ({
+  setOpenEditorPopup,
+  setOpenCreateCardPopup,
+  user,
+  cards,
+  setCards,
+}) => {
   const handleLike = (index) => {
-    console.log("index", index);
-    const x = cards[index];
-    x.isLiked(!isLiked);
-    // находим в массиве cards карточку с индексом
-    // меняем в этом объекте (карточки) поле isLiked
-    // вставляем обратно карточку в массив и вызываем setCards(newArray) // newArray = массив в пролайканной карточкой
+    const newArray = cards.map((item, itemIndex) => {
+      if (index === itemIndex) {
+        const isliked = item.isLiked;
+        item.isLiked = !isliked;
+      }
+      return item;
+    });
+
+    setCards(newArray);
   };
 
   return (
@@ -39,7 +45,7 @@ const Main = ({ setOpenEditorPopup, setOpenCreateCardPopup, user, cards }) => {
           className="section-interactions__button"
           onClick={() => setOpenCreateCardPopup(true)}
         >
-          <img src="./Add Button.svg" />
+          <img src="./callCardPopUp.svg" />
         </button>
       </section>
       <section className="main__section-cards">

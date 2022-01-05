@@ -26,12 +26,14 @@ const EditorPopup = ({ isOpen, setOpen, setUser, user }) => {
           onChange={(evt) => setNameInput(evt.target.value)}
           placeholder="Имя"
           className="popup-card__input"
+          maxlength="20"
         />
         <input
           value={descriptionInput}
           onChange={(evt) => setDescriptionInput(evt.target.value)}
           placeholder="Профессия"
           className="popup-card__input"
+          maxlength="20"
         />
         <button className="popup-card__button-save">Сохранить</button>
       </form>

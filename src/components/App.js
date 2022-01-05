@@ -27,6 +27,7 @@ function App() {
         setOpenCreateCardPopup={setOpenCreateCardPopup}
         user={user}
         cards={cards}
+        setCards={setCards}
       />
       <Footer />
       <EditorPopup
