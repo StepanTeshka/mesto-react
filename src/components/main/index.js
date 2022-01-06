@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 const Main = ({
   setOpenEditorPopup,
   setOpenCreateCardPopup,
@@ -23,7 +21,11 @@ const Main = ({
     <main className="main">
       <section className="main__section-interactions">
         <div className="section-interactions__profile">
-          <img className="profile__image" src="./image.jpg" />
+          <img
+            className="profile__image"
+            src="./image.jpg"
+            alt="profile_image"
+          />
           <div className="profile__container">
             <div className="profile__information">
               {user && user.name ? (
@@ -34,18 +36,18 @@ const Main = ({
               ) : null}
             </div>
             <button
-              className="profile__edit-button"
+              className="button profile__edit-button"
               onClick={() => setOpenEditorPopup(true)}
             >
-              <img src="./Edit Button.svg" />
+              <img src="./Edit Button.svg" alt="Edit Button" />
             </button>
           </div>
         </div>
         <button
-          className="section-interactions__button"
+          className="button section-interactions__button"
           onClick={() => setOpenCreateCardPopup(true)}
         >
-          <img src="./callCardPopUp.svg" />
+          <img src="./callCardPopUp.svg" alt="plus" />
         </button>
       </section>
       <section className="main__section-cards">
@@ -54,14 +56,15 @@ const Main = ({
             cards.map((item, index) => (
               <div key={index} className="card">
                 <div className="card__container">
-                  <img src={item.link} className="card__img" />
+                  <img src={item.link} className="card__img" alt="img__card" />
                   <div className="card__information-container">
                     <h3 className="information-container__h3">{item.title}</h3>
                     <button
-                      className="information-container__button-like"
+                      className="button information-container__button-like"
                       onClick={() => handleLike(index)}
                     >
                       <img
+                        alt="like"
                         src={item.isLiked ? "./Union.svg" : "./Vector.svg"}
                       />
                     </button>

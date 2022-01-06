@@ -6,3 +6,6 @@
   height: 50px;
   margin-top: 48px;
 }
+.popup-card__button-save:hover {
+  opacity: 80%;
+}

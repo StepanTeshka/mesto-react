@@ -2,6 +2,7 @@
 @import url("destiny-popup__h3/destiny-popup__h3.css");
 @import url("__input/popup-card__input.css");
 @import url("__button-save/popup-card__button-save.css");
+
 .popup-card {
   position: relative;
   width: 33%;

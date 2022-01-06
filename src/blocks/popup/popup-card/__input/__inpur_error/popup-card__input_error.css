@@ -1,0 +1,11 @@
+.popup-card__input_error {
+  border-color: red;
+}
+.form_error {
+  color: red;
+  font-size: 12px;
+  display: none;
+}
+.form_error_on {
+  display: block;
+}

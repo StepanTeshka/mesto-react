@@ -1,6 +1,14 @@
+@import url("__inpur_error/popup-card__input_error.css");
+@import url("form_error__create-card/form_error__create-card.css");
 .popup-card__input {
   border-width: 0px 0px 1px 0px;
   width: 100%;
   padding-top: 30px;
   outline: none;
+}
+input:invalid:not(:placeholder-shown) + .form_error__create-card {
+  display: block;
+}
+input:invalid:not(:placeholder-shown) {
+  border-color: red;
 }

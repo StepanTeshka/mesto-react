@@ -1,25 +1,9 @@
 @import url("__container/card__container.css");
+
 .card {
-  width: 31.9847459%;
-  padding-top: 20px;
+  width: 100%;
   height: 100%;
-}
-.card:nth-child(3n + 2) {
-  padding-left: 17px;
-  padding-right: 17px;
-}
-@media screen and (max-width: 900px) {
-  .card {
-    width: 49%;
-    padding-top: 25px;
-  }
-  .card:nth-child(3n + 2) {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-}
-@media screen and (max-width: 620px) {
-  .card {
-    width: 100%;
-  }
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
 }

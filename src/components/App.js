@@ -16,9 +16,6 @@ function App() {
 
   const [cards, setCards] = useState(mockCards);
 
-  console.log("isOpen editor popup", isOpenEditorPopup);
-  console.log("isOpen editor popup", isOpenСreateCardPopup);
-  console.log(cards);
   return (
     <>
       <Header />
