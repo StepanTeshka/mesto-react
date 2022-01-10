@@ -1,5 +1,6 @@
 @import url("popup-overlay/popup-overlay.css");
 @import url("popup-card/popup-card.css");
+@import url("popup-image/popup-image.css");
 .popup {
   width: 100%;
   height: 100%;
