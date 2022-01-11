@@ -1,11 +1,11 @@
 const Main = ({
   setOpenEditorPopup,
   setOpenCreateCardPopup,
-  setOpenImagePopup,
+  setOpenEditorImageProfilePopup,
   user,
   cards,
   setCards,
-  setIndex,
+  setActiveCard,
 }) => {
   const handleLike = (index) => {
     const newArray = cards.map((item, itemIndex) => {
@@ -18,20 +18,23 @@ const Main = ({
 
     setCards(newArray);
   };
-  const handleClick = (index) => {
-    setIndex(index);
-    setOpenImagePopup(true);
+  const handleClick = (item) => {
+    setActiveCard(item);
   };
 
   return (
     <main className="main">
       <section className="main__section-interactions">
         <div className="section-interactions__profile">
-          <img
-            className="profile__image"
-            src="./image.jpg"
-            alt="profile_image"
-          />
+          {user && user.link ? (
+            <img
+              className="profile__image button"
+              src={user.link}
+              alt="profile_image"
+              onClick={() => setOpenEditorImageProfilePopup(true)}
+            />
+          ) : null}
+
           <div className="profile__container">
             <div className="profile__information">
               {user && user.name ? (
@@ -70,7 +73,7 @@ const Main = ({
                     src={item.link}
                     className="card__img button"
                     alt="img__card"
-                    onClick={() => handleClick(index)}
+                    onClick={() => handleClick(item)}
                   />
                   <div className="card__information-container">
                     <h3 className="text-title">{item.title}</h3>

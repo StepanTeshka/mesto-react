@@ -4,19 +4,23 @@ import Main from "../components/main";
 import Footer from "../components/footer";
 import EditorPopup from "./modals/editor-popup";
 import CreateCardPopup from "./modals/create-card-popup";
-import ImagePopup from "../components/image-popup";
+import ImageCardsPopup from "../components/imageCards-popup";
+import EditorImageProfilePopup from "./modals/editor__image-profile-popup";
 import { mockCards } from "../utils/mock-cards";
 
 function App() {
   const [isOpenEditorPopup, setOpenEditorPopup] = useState(false);
   const [isOpenСreateCardPopup, setOpenCreateCardPopup] = useState(false);
-  const [isOpenImagePopup, setOpenImagePopup] = useState(false);
+  const [isOpenEditorImageProfilePopup, setOpenEditorImageProfilePopup] =
+    useState(false);
   const [user, setUser] = useState({
     name: `Жак-Ив Фреско`,
     description: `Исследователь океанов`,
+    link: "https://ltdfoto.ru/images/imaged4b237d071d85a63.jpg",
   });
-  const [index, setIndex] = useState(null);
   const [cards, setCards] = useState(mockCards);
+
+  const [activeCard, setActiveCard] = useState();
 
   return (
     <>
@@ -24,11 +28,12 @@ function App() {
       <Main
         setOpenEditorPopup={setOpenEditorPopup}
         setOpenCreateCardPopup={setOpenCreateCardPopup}
-        setOpenImagePopup={setOpenImagePopup}
+        setOpenEditorImageProfilePopup={setOpenEditorImageProfilePopup}
         user={user}
         cards={cards}
         setCards={setCards}
-        setIndex={setIndex}
+        setActiveCard={setActiveCard}
+        activeCard={activeCard}
       />
       <Footer />
       <EditorPopup
@@ -42,13 +47,18 @@ function App() {
         setCards={setCards}
         isOpen={isOpenСreateCardPopup}
         setOpen={setOpenCreateCardPopup}
-        index={index}
       />
-      <ImagePopup
-        isOpen={isOpenImagePopup}
-        setOpen={setOpenImagePopup}
-        cards={cards}
-        index={index}
+      {activeCard ? (
+        <ImageCardsPopup
+          activeCard={activeCard}
+          setActiveCard={setActiveCard}
+        />
+      ) : null}
+      <EditorImageProfilePopup
+        isOpen={isOpenEditorImageProfilePopup}
+        setOpen={setOpenEditorImageProfilePopup}
+        user={user}
+        setUser={setUser}
       />
     </>
   );

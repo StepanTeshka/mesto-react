@@ -4,7 +4,7 @@ const PopupOverlay = ({ isOpen, setOpen, heading, children }) => {
       <div className="popup-overlay" onClick={() => setOpen(false)} />
       <div className="popup-card">
         <button
-          className="popup-card__button-close"
+          className="popup-card__button-close button"
           onClick={() => setOpen(false)}
         >
           <img alt="close icon" src="./Close Icon.svg" />

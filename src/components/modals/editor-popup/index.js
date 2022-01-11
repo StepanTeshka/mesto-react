@@ -19,7 +19,11 @@ const EditorPopup = ({ isOpen, setOpen, setUser, user }) => {
 
     if (!nameInput || !descriptionInput) return;
 
-    setUser({ name: nameInput, description: descriptionInput });
+    setUser({
+      name: nameInput,
+      description: descriptionInput,
+      link: user.link,
+    });
     setOpen(false);
   };
 

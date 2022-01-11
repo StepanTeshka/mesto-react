@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import PopupOverlay from "../../popup-overlay";
 
-const CreateCardPopup = ({ isOpen, setOpen, setCards, cards, index }) => {
+const CreateCardPopup = ({ isOpen, setOpen, setCards, cards }) => {
   const [title, setTitle] = useState("");
   const [link, setLink] = useState("");
   const [linkError, setLinkError] = useState(null);
